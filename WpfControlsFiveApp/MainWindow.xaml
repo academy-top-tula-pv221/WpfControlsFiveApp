@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfControlsFiveApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControlsFiveApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Width="300">
+        <Slider Orientation="Horizontal"
+                Delay="2000"
+                Interval="2000"
+                TickPlacement="BottomRight"
+                TickFrequency="5"
+                Minimum="-50"
+                Maximum="40"
+                IsSelectionRangeEnabled="True"
+                SelectionStart="-50"
+                SelectionEnd="-50"
+                ValueChanged="Slider_ValueChanged"/>
+        <ProgressBar x:Name="progressBar" Height="20"/>
+        <Button Click="Button_Click" Content="Start"/>
+        <Calendar x:Name="calendar"
+                  SelectionMode="MultipleRange"
+                  DisplayMode="Month"
+                  DisplayDateStart="04.01.2023"
+                  DisplayDateEnd="04.29.2024"/>
+        <DatePicker x:Name="picker"
+                    IsDropDownOpen="True"
+                    SelectedDateFormat="Long">
+            
+        </DatePicker>
+
+
+    </StackPanel>
+</Window>
